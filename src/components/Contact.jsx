@@ -48,7 +48,7 @@ const Contact = () => {
               className="flex items-center gap-2 mb-4"
             >
               <span className="w-8 h-[1px] bg-primary/40"></span>
-              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Communication_Link</span>
+              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Link_Comunicacao</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -65,9 +65,9 @@ const Contact = () => {
 
             <div className="space-y-4">
               {[
-                { icon: Mail, label: 'DATA_STREAM', value: 'contato@meusite.dev' },
-                { icon: Phone, label: 'VOICE_LINK', value: '+55 (11) 94915-6525' },
-                { icon: MapPin, label: 'GEO_LOCATION', value: 'São Paulo, Brasil' },
+                { icon: Mail, label: 'FLUXO_DADOS', value: 'contato@meusite.dev' },
+                { icon: Phone, label: 'LINK_VOZ', value: '+55 (11) 94915-6525' },
+                { icon: MapPin, label: 'GEO_LOCALIZACAO', value: 'São Paulo, Brasil' },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -94,12 +94,12 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="glass-card p-10 relative overflow-hidden"
           >
-            <div className="absolute top-4 right-4 font-mono text-[8px] text-slate-700">INPUT_BUFFER_v2.0</div>
+            <div className="absolute top-4 right-4 font-mono text-[8px] text-slate-700">BUFFER_ENTRADA_v2.0</div>
             
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">User_Name</label>
+                  <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Nome_Usuario</label>
                   <input 
                     type="text" 
                     name="name"
@@ -107,11 +107,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full bg-secondary/50 border border-white/10 rounded px-5 py-4 text-sm text-white focus:outline-none focus:border-primary focus:shadow-[0_0_15px_rgba(0,217,255,0.1)] transition-all font-sans"
-                    placeholder="IDENTIFY YOURSELF"
+                    placeholder="IDENTIFIQUE-SE"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">User_Email</label>
+                  <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Email_Usuario</label>
                   <input 
                     type="email" 
                     name="email"
@@ -119,13 +119,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full bg-secondary/50 border border-white/10 rounded px-5 py-4 text-sm text-white focus:outline-none focus:border-primary focus:shadow-[0_0_15px_rgba(0,217,255,0.1)] transition-all font-sans"
-                    placeholder="EMAIL@PROTOCOL.IO"
+                    placeholder="EMAIL@PROTOCOLO.IO"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Project_Type</label>
+                <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Tipo_Projeto</label>
                 <select 
                   name="projectType"
                   value={formData.projectType}
@@ -140,7 +140,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Message_Payload</label>
+                <label className="block text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Carga_Mensagem</label>
                 <textarea 
                   name="message"
                   required
@@ -148,12 +148,12 @@ const Contact = () => {
                   onChange={handleChange}
                   rows="4"
                   className="w-full bg-secondary/50 border border-white/10 rounded px-5 py-4 text-sm text-white focus:outline-none focus:border-primary focus:shadow-[0_0_15px_rgba(0,217,255,0.1)] transition-all resize-none font-sans"
-                  placeholder="DESCRIBE THE MISSION OBJECTIVES..."
+                  placeholder="DESCREVA OS OBJETIVOS DA MISSÃO..."
                 ></textarea>
               </div>
 
               <button type="submit" className="btn-premium w-full flex items-center justify-center gap-3 text-xs font-mono font-bold uppercase tracking-[0.3em] py-5 cyber-border">
-                Transmit_Data
+                Transmitir_Dados
                 <Send className="w-4 h-4" />
               </button>
             </form>

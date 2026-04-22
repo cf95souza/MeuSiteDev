@@ -56,7 +56,7 @@ const Services = () => {
             className="flex items-center justify-center gap-2 mb-4"
           >
             <span className="h-[1px] w-8 bg-primary/40"></span>
-            <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Core_Expertise</span>
+            <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Especialidades_Base</span>
             <span className="h-[1px] w-8 bg-primary/40"></span>
           </motion.div>
           <motion.h2
@@ -89,7 +89,7 @@ const Services = () => {
               className="glass-card p-10 group relative border border-white/5 hover:border-primary/20"
             >
               <div className="absolute top-4 right-4 font-mono text-[8px] text-slate-700 tracking-tighter">
-                ID: 00{i + 1} // SYS_SERVICE
+                ID: 00{i + 1} // SIS_SERVICO
               </div>
               
               <div className={`w-14 h-14 rounded flex items-center justify-center mb-10 relative group-hover:scale-110 transition-transform duration-500 ${service.color.replace('500', 'primary').replace('400', 'white')}`}>
@@ -107,7 +107,7 @@ const Services = () => {
               
               <div className="flex items-center gap-3 text-[10px] font-mono font-bold text-primary uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-all">
                 <span className="w-4 h-[1px] bg-primary"></span>
-                EXECUTE_ACTION
+                EXECUTAR_ACAO
                 <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
               </div>
             </motion.div>

@@ -67,7 +67,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="btn-premium py-2 px-6 text-[10px] font-mono uppercase tracking-[0.2em] flex items-center gap-2 group cyber-border"
           >
-            Connect_
+            Conectar_
             <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
           </motion.a>
         </div>

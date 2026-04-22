@@ -22,7 +22,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            System Status: Online // Design & Tech
+            System Status: Online // Design & Tecnologia
           </motion.div>
 
           <motion.h1
@@ -55,7 +55,7 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a href="#portfolio" className="btn-outline text-sm uppercase tracking-widest px-10 py-4">
-              Explore Works
+              Explorar Portfólio
             </a>
           </motion.div>
         </div>
@@ -68,9 +68,9 @@ const Hero = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24"
         >
           {[
-            { icon: Code2, title: 'CODE ARCHITECTURE', desc: 'Sistemas escaláveis e prontos para o futuro.' },
-            { icon: Rocket, title: 'NEURAL PERFORMANCE', desc: 'Otimização máxima com carregamento instantâneo.' },
-            { icon: Shield, title: 'CYBER SECURITY', desc: 'Proteção de dados com protocolos de última geração.' },
+            { icon: Code2, title: 'ARQUITETURA DE CÓDIGO', desc: 'Sistemas escaláveis e prontos para o futuro.' },
+            { icon: Rocket, title: 'PERFORMANCE NEURAL', desc: 'Otimização máxima com carregamento instantâneo.' },
+            { icon: Shield, title: 'CIBERSEGURANÇA', desc: 'Proteção de dados com protocolos de última geração.' },
           ].map((item, i) => (
             <div key={i} className="glass-card p-8 flex flex-col items-center text-center group">
               <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary/20 transition-colors shadow-[0_0_20px_rgba(0,217,255,0.1)]">

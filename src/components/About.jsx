@@ -41,7 +41,7 @@ const About = () => {
               transition={{ delay: 0.5 }}
               className="absolute -bottom-10 -right-10 bg-surface-card/80 backdrop-blur-xl p-10 border border-primary/20 shadow-2xl hidden sm:block cyber-border"
             >
-              <p className="text-[10px] font-mono text-primary uppercase tracking-[0.4em] mb-3">Core_Philosophy</p>
+              <p className="text-[10px] font-mono text-primary uppercase tracking-[0.4em] mb-3">Filosofia_Base</p>
               <p className="text-2xl font-display font-bold text-white leading-none">NOSSO DNA_</p>
             </motion.div>
           </motion.div>
@@ -55,7 +55,7 @@ const About = () => {
               className="flex items-center gap-2 mb-4"
             >
               <span className="w-8 h-[1px] bg-primary/40"></span>
-              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">System_Profile</span>
+              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Perfil_Sistema</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-[0.3em] mb-8">Navigation_Index</h4>
+            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-[0.3em] mb-8">Indice_Navegacao</h4>
             <ul className="space-y-4">
               {['Início', 'Serviços', 'Sobre', 'Portfólio', 'Contato'].map((item) => (
                 <li key={item}>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-[0.3em] mb-8">System_Docs</h4>
+            <h4 className="text-xs font-mono font-bold text-white uppercase tracking-[0.3em] mb-8">Documentos_Sistema</h4>
             <ul className="space-y-4">
               {['Privacidade', 'Termos_Uso', 'Cookies', 'API_v1.0'].map((item) => (
                 <li key={item}>
@@ -68,11 +68,11 @@ const Footer = () => {
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col gap-2">
             <p className="text-slate-600 text-[10px] font-mono tracking-widest">
-              &copy; {new Date().getFullYear()} MEUSITEDEV_SYSTEM_v2.0 // ALL_RIGHTS_RESERVED
+              &copy; {new Date().getFullYear()} MEUSITEDEV_SISTEMA_v2.0 // TODOS_DIREITOS_RESERVADOS
             </p>
             <div className="flex items-center gap-3 text-[8px] font-mono text-primary/40">
               <span className="flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
-              CORE_SYSTEM_ACTIVE_STABLE
+              SISTEMA_ATIVO_ESTAVEL
             </div>
           </div>
           
@@ -80,7 +80,7 @@ const Footer = () => {
             onClick={scrollToTop}
             className="flex items-center gap-3 text-[10px] font-mono font-bold text-slate-500 hover:text-primary transition-all group uppercase tracking-[0.2em]"
           >
-            Terminal_Return_Top
+            Voltar_ao_Topo
             <div className="w-10 h-10 rounded border border-white/5 flex items-center justify-center group-hover:border-primary/40 group-hover:bg-primary/5 transition-all">
               <ArrowUp className="w-4 h-4" />
             </div>

@@ -51,7 +51,7 @@ const Portfolio = () => {
               className="flex items-center gap-2 mb-4"
             >
               <span className="w-8 h-[1px] bg-primary/40"></span>
-              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Project_Archives</span>
+              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.3em]">Arquivos_Projetos</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ const Portfolio = () => {
                   
                   {/* Tech Overlay Decor */}
                   <div className="absolute top-4 left-4 font-mono text-[8px] text-primary/40 group-hover:text-primary transition-colors">
-                    {project.nome || `DATA_SNAPSHOT_00${i+1}`} // ARCHIVE.SYS
+                    {project.nome || `CAPTURA_DADOS_00${i+1}`} // ARQUIVO.SIS
                   </div>
                   
                   {/* Gradient and Scanlines */}
@@ -182,7 +182,7 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-10 left-10">
-                  <div className="text-[10px] font-mono text-primary uppercase tracking-[0.4em] mb-2">Technical_Asset</div>
+                  <div className="text-[10px] font-mono text-primary uppercase tracking-[0.4em] mb-2">Ativo_Tecnico</div>
                   <h2 className="text-3xl md:text-5xl font-display font-bold text-white tracking-tighter leading-none">{selectedProject.titulo}</h2>
                 </div>
               </div>
@@ -204,7 +204,7 @@ const Portfolio = () => {
                   </p>
 
                   <div className="space-y-6">
-                    <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">Stack_Deployed_</h4>
+                    <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">Tecnologias_Implementadas_</h4>
                     <div className="flex flex-wrap gap-2">
                       {(selectedProject.tags || []).map(tag => (
                         <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300 uppercase tracking-widest transition-colors hover:border-primary/40">
@@ -223,7 +223,7 @@ const Portfolio = () => {
                       rel="noopener noreferrer"
                       className="flex-1 btn-outline py-4 text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2"
                     >
-                      <Code className="w-4 h-4" /> Source_Code
+                      <Code className="w-4 h-4" /> Código_Fonte
                     </a>
                   )}
                   {selectedProject.live_url && (
@@ -233,7 +233,7 @@ const Portfolio = () => {
                       rel="noopener noreferrer"
                       className="flex-1 btn-premium py-4 text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 cyber-border"
                     >
-                      <ExternalLink className="w-4 h-4" /> Open_Live
+                      <ExternalLink className="w-4 h-4" /> Ver_Online
                     </a>
                   )}
                 </div>
