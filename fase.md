@@ -42,12 +42,14 @@ Este documento rastreia as fases do projeto de modernização do MeuSiteDev, con
 - [x] Integração da tipografia técnica (JetBrains Mono).
 - [x] Homologação visual de todos os elementos via browser.
 
-### Fase 7: Integração Supabase & Portfólio Dinâmico [ ]
-- [ ] Configuração do cliente Supabase no Frontend.
-- [ ] Criação do Bucket `portfolio-images` no Storage.
-- [ ] Implementação da tabela `projects` com categorias dinâmicas.
-- [ ] Migração do componente `Portfolio.jsx` para consumo de API.
-- [ ] Testes de filtros e carregamento de imagens dinâmicas.
+### Fase 7: Integração Supabase & Portfólio Dinâmico [x]
+- [x] Configuração do cliente Supabase no Frontend.
+- [x] Criação do Bucket `portfolio-images` no Storage.
+- [x] Implementação da tabela `projects` com categorias dinâmicas.
+- [x] Migração do componente `Portfolio.jsx` para consumo de API.
+- [x] Implementação do Modal de Detalhes dinâmico.
+- [x] Integração de formulário com WhatsApp (11 94915-6525).
+- [x] Deploy e push final para o GitHub.
 
 ---
 *Atualizado em: 22/04/2026*

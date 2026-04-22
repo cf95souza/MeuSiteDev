@@ -59,14 +59,17 @@ const Navbar = () => {
               <span className="absolute -right-3 opacity-0 group-hover:opacity-100 transition-opacity text-primary">]</span>
             </motion.a>
           ))}
-          <motion.button
+          <motion.a
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
+            href="https://wa.me/5511949156525"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-premium py-2 px-6 text-[10px] font-mono uppercase tracking-[0.2em] flex items-center gap-2 group cyber-border"
           >
             Connect_
             <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Mobile Toggle */}
@@ -98,7 +101,14 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <button className="btn-premium mt-4 w-full py-4 text-xs font-mono uppercase tracking-widest cyber-border">Falar Conosco_</button>
+              <a 
+                href="https://wa.me/5511949156525"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-premium mt-4 w-full py-4 text-xs font-mono uppercase tracking-widest cyber-border text-center"
+              >
+                Falar Conosco_
+              </a>
             </div>
           </motion.div>
         )}
