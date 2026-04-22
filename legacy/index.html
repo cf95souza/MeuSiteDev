@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Services | Desenvolvimento &amp; Dados</title>
+    <meta name="description"
+        content="Desenvolvedor Full Stack e Especialista em Dados. Crio sistemas web sob medida, dashboards e automações para otimizar seu negócio.">
+    <meta property="og:title" content="Dev Services | Desenvolvimento & Dados">
+    <meta property="og:description"
+        content="Transforme suas ideias em sistemas escaláveis. Desenvolvimento Web, Banco de Dados e Dashboards.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0a0a0f">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+
+<body class="h-full font-display bg-[#0a0a0f] text-[#e4e4e7] overflow-x-hidden">
+    <div id="app" class="w-full min-h-screen overflow-x-hidden"><!-- Floating Background Elements -->
+        <div class="fixed inset-0 pointer-events-none overflow-hidden">
+            <div class="absolute top-20 left-10 w-96 h-96 bg-cyan-500 rounded-full animate-pulse-glow opacity-20"></div>
+            <div class="absolute bottom-20 right-10 w-80 h-80 bg-purple-500 rounded-full animate-pulse-glow opacity-20"
+                style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full grid-bg opacity-50">
+            </div>
+        </div><!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-slate-900 rounded-md flex items-center justify-center">
+                        <span class="font-mono text-cyan-400 text-sm font-bold">&lt;/&gt;</span>
+                    </div>
+                    <span class="font-mono text-lg font-bold text-slate-900">dev<span
+                            class="text-cyan-500">.services</span></span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#sobre"
+                        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Sobre</a>
+                    <a href="#portfolio"
+                        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Portfólio</a>
+                    <a href="#solucao"
+                        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Solução</a>
+                    <a href="#servicos"
+                        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Serviços</a>
+                    <a href="#planos"
+                        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Planos</a>
+                    <a href="#contato"
+                        class="px-4 py-2 bg-slate-900 text-white rounded-md text-sm font-medium hover:bg-slate-800 transition-all shadow-sm">Contato</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex items-center justify-center px-6 pt-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-50 border border-cyan-100 rounded-full">
+                        <span class="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></span>
+                        <span class="font-mono text-xs font-medium text-cyan-700 uppercase tracking-wider">Disponível
+                            para novos projetos</span>
+                    </div>
+                    <h1 id="hero-title" class="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.1]">
+                        Desenvolvedor de <span class="text-cyan-600">Sistemas Web</span>
+                    </h1>
+                    <p id="hero-subtitle" class="text-xl text-slate-600 max-w-2xl leading-relaxed">
+                        Soluções simples, eficientes e escaláveis. Transformamos processos operacionais em sistemas
+                        digitais de alta performance desde 2019.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contato"
+                            class="px-8 py-4 bg-slate-900 text-white rounded-lg font-semibold text-base hover:bg-slate-800 transition-all shadow-md shadow-slate-200">
+                            Iniciar Projeto
+                        </a>
+                        <a href="#servicos"
+                            class="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-lg font-semibold text-base hover:bg-slate-50 transition-all shadow-sm">
+                            Ver Serviços
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Tecnologias:</span>
+                        <div class="flex gap-3">
+                            <span class="text-xs font-medium text-slate-500 px-2 py-1 bg-slate-100 rounded">React</span>
+                            <span
+                                class="text-xs font-medium text-slate-500 px-2 py-1 bg-slate-100 rounded">Node.js</span>
+                            <span
+                                class="text-xs font-medium text-slate-500 px-2 py-1 bg-slate-100 rounded">PostgreSQL</span>
+                            <span
+                                class="text-xs font-medium text-slate-500 px-2 py-1 bg-slate-100 rounded">Supabase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative hidden lg:block">
+                    <div
+                        class="relative z-10 bg-white p-8 rounded-xl border border-slate-200 shadow-xl overflow-hidden">
+                        <div class="flex gap-1.5 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+                            <div class="w-3 h-3 rounded-full bg-slate-200"></div>
+                        </div>
+                        <div class="space-y-4 font-mono text-sm">
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">01</span>
+                                <span class="text-slate-800"><span class="text-cyan-600">const</span> <span
+                                        class="text-purple-600">developer</span> = {</span>
+                            </div>
+                            <div class="flex gap-4 pl-4">
+                                <span class="text-slate-400">02</span>
+                                <span class="text-slate-800">skills: [<span class="text-emerald-600">"Fullstack"</span>,
+                                    <span class="text-emerald-600">"Data"</span>],</span>
+                            </div>
+                            <div class="flex gap-4 pl-4">
+                                <span class="text-slate-400">03</span>
+                                <span class="text-slate-800">expert: <span class="text-emerald-600">"Workflow
+                                        Automation"</span>,</span>
+                            </div>
+                            <div class="flex gap-4 pl-4">
+                                <span class="text-slate-400">04</span>
+                                <span class="text-slate-800">database: <span
+                                        class="text-emerald-600">"PostgreSQL"</span></span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">05</span>
+                                <span class="text-slate-800">};</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ambient Glow -->
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-cyan-100 rounded-full blur-[100px] opacity-60">
+                    </div>
+                    <div
+                        class="absolute -bottom-20 -left-20 w-64 h-64 bg-purple-100 rounded-full blur-[100px] opacity-60">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sobre Mim -->
+        <section id="sobre" class="relative py-24 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-slate-50 rounded-2xl -z-10"></div>
+                            <div class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm">
+                                <div class="flex items-center gap-5 mb-8">
+                                    <div class="w-20 h-20 rounded-lg bg-slate-900 flex items-center justify-center">
+                                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-slate-900">Caio Franca</h3>
+                                        <p class="text-cyan-600 font-mono text-sm font-medium">Fullstack Developer</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                                        <span id="about-experience" class="text-slate-600 text-sm font-medium">+5 anos
+                                            de experiência em TI</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                                        <span id="about-projects" class="text-slate-600 text-sm font-medium">+50
+                                            projetos entregues</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                                        <span class="text-slate-600 text-sm font-medium">Especialista em
+                                            Automação</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="font-mono text-cyan-600 text-xs font-bold uppercase tracking-widest">// SOBRE
+                            MIM</span>
+                        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                            Transformando <span class="text-cyan-600">processos</span> em sistemas de <span
+                                class="text-indigo-600">alta performance</span>
+                        </h2>
+                        <p id="about-text" class="text-lg text-slate-600 leading-relaxed italic">
+                            "Desde 2019, ajudo empresas a digitizarem suas operações com código limpo e arquitetura
+                            escalável."
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Minha experiência vem da base operacional - eu conheço os desafios reais do dia a dia de uma
+                            empresa. Especializado em criar sistemas sob medida que organizam, otimizam e escalam. Do
+                            workflow ao CRM, do helpdesk a gestão de ordens de serviço: entregamos software que
+                            realmente resolve problemas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-4">
+                            <span
+                                class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold uppercase tracking-wider">Visão
+                                Operacional</span>
+                            <span
+                                class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold uppercase tracking-wider">Código
+                                Escalável</span>
+                            <span
+                                class="px-3 py-1 bg-slate-100 text-slate-600 rounded-md text-xs font-bold uppercase tracking-wider">Banco
+                                de Dados Sólido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio / Projetos -->
+        <section id="portfolio" class="relative py-24 px-6 bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div class="max-w-2xl">
+                        <span class="font-mono text-cyan-600 text-xs font-bold uppercase tracking-widest block mb-4">//
+                            PORTFÓLIO</span>
+                        <h2 class="text-4xl font-bold text-slate-900 mb-4">Projetos <span
+                                class="text-cyan-600">Recentes</span></h2>
+                        <p class="text-lg text-slate-600">Conheça alguns dos trabalhos que desenvolvi para transformar
+                            negócios e otimizar resultados.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projeto 1 -->
+                    <div
+                        class="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+                        <div class="aspect-video bg-slate-100 overflow-hidden relative">
+                            <img src="assets/portfolio/projeto-rh.jpg" alt="Sistema de Gestão RH"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                                Sistema de Gestão RH</h3>
+                            <p class="text-sm text-slate-600 mb-6 leading-relaxed">Plataforma completa para gestão
+                                colaboradores, cadastro de vagas e folha de pagamento.</p>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-50">
+                                <span
+                                    class="px-2 py-1 bg-slate-50 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">React</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-50 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div
+                        class="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+                        <div class="aspect-video bg-slate-100 overflow-hidden relative">
+                            <img src="assets/portfolio/dashboard-bi.jpg" alt="Dashboard Financeiro"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                                Dashboard Financeiro</h3>
+                            <p class="text-sm text-slate-600 mb-6 leading-relaxed">Dashboard interativo para análise de
+                                custos e receitas consolidado em tempo real.</p>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-50">
+                                <span
+                                    class="px-2 py-1 bg-slate-50 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">Power
+                                    BI</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-50 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projeto 3 -->
+                    <div
+                        class="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300">
+                        <div class="aspect-video bg-slate-100 overflow-hidden relative">
+                            <img src="assets/portfolio/ecommerce-b2b.jpg" alt="Site Institucional"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                            <div class="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors">
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                                Site Institucional</h3>
+                            <p class="text-sm text-slate-600 mb-6 leading-relaxed">Página moderna para apresentação de
+                                serviços e coleta de leads qualificados.</p>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-50">
+                                <span
+                                    class="px-2 py-1 bg-slate-50 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">React</span>
+                                <span
+                                    class="px-2 py-1 bg-slate-50 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- A Solucao -->
+        <section id="solucao" class="relative py-24 px-6 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="font-mono text-cyan-600 text-xs font-bold uppercase tracking-widest block mb-4">//
+                        PROCESSO</span>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Do <span
+                            class="text-cyan-600">levantamento</span> ao <span class="text-indigo-600">suporte</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">Um processo estruturado que garante
+                        previsibilidade, qualidade técnica e escalabilidade.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:border-cyan-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="font-mono text-slate-400 text-xs font-bold">FASE 01</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Levantamento</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Entendimento profundo dos processos atuais e
+                            definição clara dos objetivos de negócio.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:border-cyan-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <span class="font-mono text-slate-400 text-xs font-bold">FASE 02</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Desenvolvimento</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Construção com foco em código limpo,
+                            performance e experiência do usuário profissional.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:border-cyan-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="font-mono text-slate-400 text-xs font-bold">FASE 03</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Estabilização</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Período de 30 dias de acompanhamento intensivo
+                            para garantir a robustez da solução.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:border-cyan-200 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-slate-900 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="font-mono text-slate-400 text-xs font-bold">FASE 04</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-2 mb-3">Suporte</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Parceria de longo prazo com manutenção
+                            evolutiva e suporte técnico consultivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Servicos -->
+        <section id="servicos" class="relative py-32 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16"><span class="font-mono text-cyan-400 text-sm mb-4 block">//
+                        SERVIÇOS</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">O que eu <span class="text-cyan-400">ofereço</span>
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6"><!-- Desenvolvimento -->
+                    <div class="group gradient-border rounded-3xl p-8 bg-[#12121a] card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Desenvolvimento Web</h3>
+                        <p class="text-zinc-400 mb-6">Sistemas sob medida com React, Node.js e interfaces intuitivas.
+                            Ordens de serviço, workflows, CRM - qualquer processo que você queira otimizar.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Sistemas customizados</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Workflows &amp; Automações</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Integração de dados</li>
+                        </ul>
+                    </div><!-- Banco de Dados -->
+                    <div class="group gradient-border rounded-3xl p-8 bg-[#12121a] card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" stroke-width="2" />
+                                <path d="M21 5v6c0 1.66-4.03 3-9 3s-9-1.34-9-3V5" stroke-width="2" />
+                                <path d="M21 11v6c0 1.66-4.03 3-9 3s-9-1.34-9-3v-6" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Modelagem &amp; BD</h3>
+                        <p class="text-zinc-400 mb-6">Bancos de dados bem estruturados que crescem com você. PostgreSQL,
+                            Supabase e arquitetura pensada para performance.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Design de schemas</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Otimização &amp; queries</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-purple-400 rounded-full"></span> Integridade de dados</li>
+                        </ul>
+                    </div><!-- Suporte & Manutencao -->
+                    <div class="group gradient-border rounded-3xl p-8 bg-[#12121a] card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Suporte &amp; Manutenção</h3>
+                        <p class="text-zinc-400 mb-6">Correções, ajustes, melhorias contínuas. Atendimento direto,
+                            rápido e próximo. Seu sistema sempre evoluindo.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Correção de bugs</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Manutenção preventiva</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-cyan-400 rounded-full"></span> Novas funcionalidades</li>
+                        </ul>
+                    </div>
+
+                    <div class="group gradient-border rounded-3xl p-8 bg-[#12121a] card-hover">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Infraestrutura & TI</h3>
+                        <p class="text-zinc-400 mb-6">Soluções completas de hardware e rede para sua empresa.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Formatação e Softwares</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Redes e Servidores</li>
+                            <li class="flex items-center gap-3 text-sm text-zinc-300"><span
+                                    class="w-1.5 h-1.5 bg-green-400 rounded-full"></span> Manutenção de Micros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section><!-- Diferenciais -->
+    <section id="diferenciais" class="relative py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-mono text-cyan-600 text-xs font-bold uppercase tracking-widest block mb-4">//
+                    DIFERENCIAIS</span>
+                <h2 class="text-4xl font-bold text-slate-900 mb-6">Por que me <span
+                        class="text-cyan-600">escolher</span>?</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-cyan-200 transition-colors">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Visão Operacional</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Entendo as dores do dia a dia porque conheço o
+                            fluxo operacional real das empresas.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-cyan-200 transition-colors">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Código Organizado</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Desenvolvimento focado em manutenibilidade e
+                            escalabilidade do seu software.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-cyan-200 transition-colors">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Engenharia de Dados</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Modelagem de dados sólida que garante a
+                            integridade e rapidez das informações.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-cyan-200 transition-colors">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Processo Transparente</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Etapas claras e entregas faseadas para total
+                            visibilidade do projeto.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-cyan-200 transition-colors">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Suporte Próximo</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Atendimento direto e consultivo para resolver
+                            dúvidas e implementar melhorias.</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-100 hover:border-cyan-200 transition-colors">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 mb-1">Evolução Contínua</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Soluções preparadas para crescer e se adaptar
+                            às novas demandas do negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Planos e Investimento -->
+    <section id="planos" class="relative py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="font-mono text-cyan-600 text-xs font-bold uppercase tracking-widest block mb-4">//
+                    PLANOS</span>
+                <h2 class="text-4xl font-bold text-slate-900 mb-6">Investimento <span
+                        class="text-cyan-600">Transparente</span></h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Modelos flexíveis para diferentes estágios de
+                    maturidade digital do seu negócio.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Essencial -->
+                <div
+                    class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex flex-col group hover:border-cyan-200 transition-all">
+                    <div class="mb-6">
+                        <span
+                            class="font-mono text-slate-400 text-[10px] font-bold uppercase tracking-widest">STARTUP</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">Essencial</h3>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Levantamento de requisitos
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Desenvolvimento & Deploy
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Estabilização (30 dias)
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="w-full py-3 px-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-lg text-sm font-bold text-center hover:bg-slate-900 hover:text-white transition-all">
+                        Consultar
+                    </a>
+                </div>
+                <!-- Profissional -->
+                <div
+                    class="bg-slate-900 p-8 rounded-xl border border-slate-800 shadow-xl flex flex-col relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 px-3 py-1 bg-cyan-500 text-[10px] font-bold text-white uppercase tracking-widest rounded-bl-lg">
+                        TOP</div>
+                    <div class="mb-6">
+                        <span
+                            class="font-mono text-cyan-400 text-[10px] font-bold uppercase tracking-widest">ENTERPRISE</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Profissional</h3>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Escopo Ilimitado
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Design UX/UI Premium
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Suporte Prioritário
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="w-full py-3 px-4 bg-cyan-500 text-white rounded-lg text-sm font-bold text-center hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-500/20">
+                        Falar Agora
+                    </a>
+                </div>
+                <!-- BI -->
+                <div
+                    class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex flex-col group hover:border-cyan-200 transition-all">
+                    <div class="mb-6">
+                        <span
+                            class="font-mono text-slate-400 text-[10px] font-bold uppercase tracking-widest">DATA</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">Inteligência BI</h3>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Dashboards Financeiro/Contábil
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Extração Automática (ERP)
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Treinamento da Equipe
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="w-full py-3 px-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-lg text-sm font-bold text-center hover:bg-slate-900 hover:text-white transition-all">
+                        Solicitar Demo
+                    </a>
+                </div>
+                <!-- Infra -->
+                <div
+                    class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm flex flex-col group hover:border-cyan-200 transition-all">
+                    <div class="mb-6">
+                        <span
+                            class="font-mono text-slate-400 text-[10px] font-bold uppercase tracking-widest">HARDWARE</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">Infra completa</h3>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Gestão de Parque Tecnológico
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Suporte a Servidores
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Segurança de Rede
+                        </li>
+                    </ul>
+                    <a href="#contato"
+                        class="w-full py-3 px-4 bg-slate-50 text-slate-900 border border-slate-200 rounded-lg text-sm font-bold text-center hover:bg-slate-900 hover:text-white transition-all">
+                        Agendar Visita
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <p class="text-sm text-slate-500 italic">Cada empresa tem um DNA único. Adaptamos nossos planos à sua
+                    realidade.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contato -->
+    <section id="contato" class="relative py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="font-mono text-cyan-600 text-xs font-bold uppercase tracking-widest block mb-4">//
+                CONTATO</span>
+            <h2 class="text-4xl font-bold text-slate-900 mb-6">Pronto para <span
+                    class="text-cyan-600">profissionalizar</span> seu negócio?</h2>
+            <p class="text-lg text-slate-600 mb-12">Entre em contato para uma consultoria técnica gratuita e descubra
+                como a tecnologia pode impulsionar seus resultados.</p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="https://wa.me/5511949156525" target="_blank"
+                    class="flex items-center gap-3 px-8 py-4 bg-emerald-500 text-white rounded-xl font-bold hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-500/20 group">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                    Conversar no WhatsApp
+                </a>
+                <a href="mailto:cf95.souza@gmail.com"
+                    class="flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg shadow-slate-900/10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    Enviar E-mail
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center font-bold text-white text-xl">
+                    M</div>
+                <span class="text-xl font-bold text-white tracking-tight">MeuSite<span
+                        class="text-cyan-400">Dev</span></span>
+            </div>
+
+            <div class="flex gap-8 text-sm text-slate-400">
+                <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+                <a href="#portfolio" class="hover:text-cyan-400 transition-colors">Portfólio</a>
+                <a href="#servicos" class="hover:text-cyan-400 transition-colors">Serviços</a>
+                <a href="#planos" class="hover:text-cyan-400 transition-colors">Planos</a>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-xs text-slate-500 font-mono">© 2024 MeuSiteDev // All Rights Reserved</p>
+                <p class="text-xs text-slate-600">Desenvolvido com foco em performance e resultados.</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9ccc4532638bca62',t:'MTc3MDkwMTI0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
